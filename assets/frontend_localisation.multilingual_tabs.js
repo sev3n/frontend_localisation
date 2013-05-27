@@ -56,6 +56,8 @@
 				collection.$m_panels.hide().filter('.tab-'+lang_code).show();
 			});
 
+			$current_tab = collection.$m_tabs.filter(':first');
+
 			// trigger current tab
 			$current_tab.click();
 
