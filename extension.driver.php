@@ -125,6 +125,8 @@
 		/*------------------------------------------------------------------------------------------------*/
 
 		public function fetchNavigation(){
+			return array();
+
 			return array(
 				array(
 					'name' => __("Translations"),
@@ -161,6 +163,17 @@
 				),
 
 
+				/* Delegate aggiunto per fix issue con plugin
+				 * CKFeditor
+				 */
+				array(
+					'page' => '/backend/',
+					'delegate' => 'AdminPagePostCallback',
+					'callback' => 'dInitialiseAdminPageHead'
+				),
+				/*
+				 * End customization
+				 */
 
 				array(
 					'page' => '/frontend/',
